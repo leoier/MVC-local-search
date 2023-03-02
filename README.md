@@ -1,4 +1,4 @@
-# Minimum Vertex Cover
+# Local Search Algorithms for Minimum Vertex Cover
 
 ## Introduction
 
