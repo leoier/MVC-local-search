@@ -18,7 +18,7 @@ public class RunExperiments {
 
 		// parse the input arguments
 		String errMsg = "The arguments must be in the following format:\n" +
-			"-inst <filename> -alg [BnB|Approx|LS1|LS2] -time <cutoff in seconds> -seed <random seed>";
+			"-inst <filename> -alg [LS1|LS2] -time <cutoff in seconds> -seed <random seed>";
 
 		if (args.length < 8) {
 			System.err.println(errMsg);
@@ -69,7 +69,7 @@ public class RunExperiments {
 		String instance = parameters.get("inst").split("\\.")[0];	// remove the .graph extension
 		String outputInfo = instance + "_" + parameters.get("alg")
 			+ "_" + parameters.get("time");
-		if (parameters.get("alg").equals("Approx") || parameters.get("alg").equals("LS1") || parameters.get("alg").equals("LS2")) {
+		if (parameters.get("alg").equals("LS1") || parameters.get("alg").equals("LS2")) {
 			outputInfo += "_" + parameters.get("seed");
 		}
 		// Write results to the solution file
